@@ -1,12 +1,12 @@
 # Routing
 
-Routing is the core of web framework.
+Routing is the core of a web framework.
 
 ## Static Routing
 
-Registering handler `hello` by specifying path, HTTP methods and middlewares.
+Register handler `hello` by specifying path, HTTP methods and middlewares.
 
-`HttpGet` is the default HTTP methods. If you have registered a handler with `HttpGet`, `Prologue` will automatically register `HttpHead` for this handler.
+`HttpGet` is the default HTTP method. If you have registered a handler with `HttpGet`, `Prologue` will automatically register `HttpHead` for this handler.
 
 ```nim
 # handler
@@ -24,7 +24,7 @@ app.addRoute("/hello", hello)
 app.run()
 ```
 
-You can also use `seq[httpMetod]` to register the same handler but supports multiple HTTP methods.
+You can also use `seq[httpMethod]` to register the same handler and support multiple HTTP methods.
 
 ```nim
 import prologue
